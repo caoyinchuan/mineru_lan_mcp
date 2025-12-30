@@ -2,9 +2,9 @@
 
 from pathlib import Path
 from typing import Optional, Dict, Any
-from .file_handler import FileHandler
-from .cache import CacheManager
-from .config import Config
+from mineru_lan_mcp.file_handler import FileHandler
+from mineru_lan_mcp.cache import CacheManager
+from mineru_lan_mcp.config import Config
 
 
 class PDFParser:

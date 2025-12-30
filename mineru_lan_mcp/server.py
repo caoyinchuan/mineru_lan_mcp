@@ -1,8 +1,7 @@
 """MCP PDF Parser 服务 - 使用 FastMCP 框架"""
 
 from fastmcp import FastMCP
-from pathlib import Path
-from .pdf_parser import PDFParser
+from mineru_lan_mcp.pdf_parser import PDFParser
 
 mcp = FastMCP("MCP PDF Parser")
 

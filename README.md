@@ -21,11 +21,16 @@
 ```bash
 # 使用 uv 安装依赖
 uv sync
-
-# 或使用 pip
-pip install -r requirements.txt
 ```
-
+## 部署mineru-api
+可以在本机或局域网任何一台电脑上操作
+```bash
+# 安装mineru
+pip install -U mineru
+# 运行mineru-api
+export MINERU_MODEL_SOURCE=modelscope
+mineru-api --host 0.0.0.0 --port 10880
+```
 ## 配置
 
 1. 复制环境变量示例文件：
@@ -47,16 +52,26 @@ UPLOAD_TIMEOUT=300
 
 ```bash
 # 使用 uv
-uv run python -m mcp_pdf_parser.server
-
-# 或使用 python
-python -m mcp_pdf_parser.server
+uv run PATH_TO_YOUR_PROJECT/mineru_lan_mcp/mineru_lan_mcp/server.py
+```
+### MCP Server Configuration
+```json
+{
+    "mineru-lan-mcp": {
+      "description": "tranform pdf to markdown",
+      "command": "uv",
+      "args": [
+        "run",
+        "Path_to_your_project/mineru_lan_mcp/mineru_lan_mcp/server.py"
+      ]
+    }
+}
 ```
 
 ### 测试客户端
 
 ```bash
-uv run python test/test_client.py
+uv run PATH_TO_YOUR_PROJECT/test/test_client.py
 ```
 
 ### MCP 工具参数
