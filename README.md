@@ -52,19 +52,17 @@ UPLOAD_TIMEOUT=300
 
 ```bash
 # 使用 uv
-uv run PATH_TO_YOUR_PROJECT/mineru_lan_mcp/mineru_lan_mcp/server.py
+uv run --project PATH_TO_YOUR_PROJECT PATH_TO_YOUR_PROJECT/mineru_lan_mcp/mineru_lan_mcp/server.py
 ```
 ### MCP Server Configuration
 ```json
 {
+  "mcpServers": {
     "mineru-lan-mcp": {
-      "description": "tranform pdf to markdown",
       "command": "uv",
-      "args": [
-        "run",
-        "Path_to_your_project/mineru_lan_mcp/mineru_lan_mcp/server.py"
-      ]
+      "args": ["run", "--project", "D:\\python\\mineru_lan_mcp", "D:\\python\\mineru_lan_mcp\\mineru_lan_mcp\\server.py"]
     }
+  }
 }
 ```
 
